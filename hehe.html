@@ -1,0 +1,53 @@
+max_temp.innerHTML = main.max_temp
+min_temp.innerHTML = main.min_temp
+min_temp.innerHTML = main.min_temp
+min_temp.innerHTML = main.min_temp
+min_temp.innerHTML = main.min_temp
+sunrise.innerHTML = main.sunrise
+sunset.innerHTML = main.sunset
+temp.innerHTML = main.temp
+wind_degrees.innerHTML = main.wind_degrees 
+wind_speed.innerHTML = main.wind_speed
+
+
+var result = await response.json();
+		console.log(result)
+
+
+		const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=delhi';
+		const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '3e15388975mshc6cfaaeb6a3c482p116d6ajsn8cc0b64f788f',
+				'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+			}
+		};
+
+		
+		async function main(){
+			try{
+				const response = await fetch(url, options);
+				const result = await response.json();
+				console.log(result)
+				console.log(JSON.stringify(result))
+				max_temp.innerHTML = main.max_temp
+		min_temp.innerHTML = main.min_temp
+		min_temp.innerHTML = main.min_temp
+		min_temp.innerHTML = main.min_temp
+		min_temp.innerHTML = main.min_temp
+		sunrise.innerHTML = main.sunrise
+		sunset.innerHTML = main.sunset
+		temp.innerHTML = main.temp
+		wind_degrees.innerHTML = main.wind_degrees 
+		wind_speed.innerHTML = main.wind_speed
+		
+			}
+			
+			catch(error) {
+				console.error(error);
+			}
+		}
+		main()
+			
+		
+		
